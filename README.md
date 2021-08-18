@@ -51,7 +51,7 @@ A smooth sentence is a sentence where the first letter of every word matches the
 
 *Jump to: [Table of Contents](#table-of-contents), [Code Snippets](#code-snippets), [Page Top](#coding-challenges)*
 
-### Smooth Sentence: [Application](https://github.com/CurleyT/SmoothSentence/tree/main/NameSearch_Application) | [Source](https://github.com/CurleyT/SmoothSentence/tree/main/NameSearch_SourceCode)
+### Smooth Sentence: [Application](https://github.com/CurleyT/SmoothSentence/tree/main/SmoothSentence_Application) | [Source](https://github.com/CurleyT/SmoothSentence/tree/main/SmoothSentence_SourceCode)
 ```
 public static bool checkSentence(string input)
         {
