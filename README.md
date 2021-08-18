@@ -3,9 +3,17 @@ This repo will be full of challenges I've either submitted during the applicatio
 
 
 ## Table of Contents
-* ### NameSearch Challenge: [Application](https://github.com/CurleyT/NameSearch/tree/main/NameSearch_Application) | [Source](https://github.com/CurleyT/NameSearch/tree/main/NameSearch_SourceCode)
-  * This code allows you to parse through a chunk of text and encrypt any instances of items from a designated list by replacing each character in that item with an 'X', making something like "Jacob" become "XXXXX". Code added after submission allows you to extend the characters it will check each text block for after splitting (i.e. periods, commas, etc..)
-  * Code Snippet: 
+* ### [Name Search](#name-search)
+This application allows you to parse through a chunk of text and encrypt any instances of items from a designated list by replacing each character in that item with an 'X', making something like "Jacob" become "XXXXX". Code added after submission allows you to extend the characters it will check each text block for after splitting (i.e. periods, commas, etc..)
+* ### [Smooth Sentence](#smooth-sentence)
+A smooth sentence is a sentence where the first letter of every word matches the last letter of the word it follows. This application takes an input and parses through that input to determine whether or not it can be classified as a smooth sentence and then returns a boolean with the result.
+
+
+
+
+## Code Snippets
+
+### Name Search: [Application](https://github.com/CurleyT/NameSearch/tree/main/NameSearch_Application) | [Source](https://github.com/CurleyT/NameSearch/tree/main/NameSearch_SourceCode)
  ```
  string[] textArray = textChunk.Split(" ");                                                  //Splitting textChunk into String Array at each space
             foreach (string name in names)                                                              //Parsing through names List
@@ -40,3 +48,25 @@ This repo will be full of challenges I've either submitted during the applicatio
                         textArray[i] = replaceName;                                                     //Replacing the current position in the array with our altered name
                     }
  ```
+
+*Jump to: [Table of Contents](#table-of-contents), [Code Snippets](#code-snippets), [Page Top](#coding-challenges)*
+
+### Smooth Sentence: [Application](https://github.com/CurleyT/SmoothSentence/tree/main/NameSearch_Application) | [Source](https://github.com/CurleyT/SmoothSentence/tree/main/NameSearch_SourceCode)
+```
+public static bool checkSentence(string input)
+        {
+            bool check = true;
+            List<string> words = new List<string>(input.Split(" "));
+
+            for (int i = 0; i < words.Count - 1; i++)
+            {
+                string currentWord = words[i];
+                string nextWord = words[i + 1];
+
+                if (currentWord[currentWord.Length - 1] != nextWord[0])
+                    check = false;
+            }
+            return check;
+        }
+```
+*Jump to: [Table of Contents](#table-of-contents), [Code Snippets](#code-snippets), [Page Top](#coding-challenges)*
